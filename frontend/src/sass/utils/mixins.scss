@@ -8,6 +8,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+/****** import font Yellowtail ******/
+@mixin fontLogo {
+  font-family: "Yellowtail", cursive;
+}
+
 /********* mixin box shadow_button *********/
 @mixin shadow_light {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);

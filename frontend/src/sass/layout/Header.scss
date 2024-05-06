@@ -1,2 +1,8 @@
 @import "../utils/Mixins.scss";
 @import "../utils/Variables.scss";
+
+header {
+  @include fontLogo;
+  font-size: 3.5em;
+  color: $secondary_color;
+}
