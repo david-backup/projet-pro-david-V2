@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import MdpForgot from "./pages/MdpForgot";
 import CreateAccount from "./pages/CreateAccount";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="mdp-forgot" element={<MdpForgot />} />
           <Route path="/create-account" element={<CreateAccount />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

@@ -1,18 +1,18 @@
 @import "../utils/Mixins.scss";
 @import "../utils/Variables.scss";
 
-header {
-  @include shadow_light;
+footer {
+  @include shadow_medium;
   width: 100%;
   margin: 0px auto;
 
-  .header_content {
+  .footer_content {
     @include fontLogo;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 25px;
-    font-size: 3.5em;
+    padding: 10px 25px;
+    font-size: 2em;
     color: $secondary_color;
   }
 }
