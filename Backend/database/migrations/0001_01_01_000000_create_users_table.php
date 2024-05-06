@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -11,15 +12,28 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+        // Create user table
+        Schema::create('user', function (Blueprint $table) {
+            $table->integer('idUser')->autoIncrement();
+            $table->string('pseudo');
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('token')->nullable();
+            $table->timestamp('dateLastConnexion')->nullable();
+            $table->timestamp('deconnexion')->nullable();
+            $table->tinyInteger('statutConnexion')->default(0);
+            $table->timestamp('updatedAt')->nullable();
         });
+
+        // Ajouter un utilisateur par défaut
+        DB::table('user')->insert([
+            'pseudo' => 'admin',
+            'password' => bcrypt('admin'), // Utilise bcrypt pour hasher le mot de passe
+            'token' => null,
+            'dateLastConnexion' => now(),
+            'deconnexion' => null,
+            'statutConnexion' => 0,
+            'updatedAt' => now(),
+        ]);
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
