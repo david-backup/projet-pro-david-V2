@@ -2,7 +2,7 @@ const HomePage = () => {
   return (
     <>
       <main>
-        <h1>en cours de développement</h1>
+        <h1>Site en cours de développement</h1>
       </main>
     </>
   );

@@ -3,8 +3,10 @@
 
 header {
   @include shadow_light;
+  background-color: $primary_color;
   width: 100%;
   margin: 0px auto;
+  z-index: 100;
 
   .header_content {
     @include fontLogo;
@@ -13,6 +15,6 @@ header {
     justify-content: space-between;
     padding: 20px 25px;
     font-size: 3.5em;
-    color: $secondary_color;
+    color: $white_color;
   }
 }

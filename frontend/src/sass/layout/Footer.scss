@@ -5,14 +5,28 @@ footer {
   @include shadow_medium;
   width: 100%;
   margin: 0px auto;
+  z-index: 100;
+  background-color: $primary_color;
 
   .footer_content {
-    @include fontLogo;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 25px;
-    font-size: 2em;
-    color: $secondary_color;
+    &_title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h3 {
+        @include fontLogo;
+        font-size: 2.2em;
+        color: $white_color;
+      }
+      h4 {
+        @include fontLogo;
+        font-size: 1.4em;
+        color: $white_color;
+      }
+    }
   }
 }

@@ -115,6 +115,7 @@ section {
 }
 html,
 body {
+  @include lato;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

@@ -1,2 +1,9 @@
 @import "../utils/Mixins.scss";
 @import "../utils/Variables.scss";
+
+main {
+  h1 {
+    font-size: 2em;
+    font-weight: 600;
+  }
+}
