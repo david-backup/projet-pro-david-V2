@@ -21,15 +21,24 @@ class User extends Authenticatable
      */
     protected $table = 'user';
     protected $primaryKey = 'idUser'; // Clé primaire
-    
+
     protected $fillable = [
-        'pseudo',
+        'identifiant',
+        'email',
         'password',
         'token',
+        'urlPictureProfil',
+        'idUserPermissions',
         'dateLastConnexion',
         'deconnexion',
         'statutConnexion'
     ];
+
+    // Relations
+    public function idUserPermissions()
+    {
+        return $this->belongsTo(UserPermissions::class, 'idUserPermissions');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

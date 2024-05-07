@@ -15,9 +15,13 @@ return new class extends Migration
         // Create user table
         Schema::create('user', function (Blueprint $table) {
             $table->integer('idUser')->autoIncrement();
-            $table->string('pseudo');
+            $table->string('identifiant');
+            $table->string('email');
             $table->string('password');
             $table->string('token')->nullable();
+            $table->string('urlPictureProfil')->nullable();
+            $table->integer('idUserPermissions')->nullable();
+            $table->foreign('idUserPermissions')->references('idUserPermissions')->on('userPermissions');
             $table->timestamp('dateLastConnexion')->nullable();
             $table->timestamp('deconnexion')->nullable();
             $table->tinyInteger('statutConnexion')->default(0);
@@ -26,13 +30,15 @@ return new class extends Migration
 
         // Ajouter un utilisateur par défaut
         DB::table('user')->insert([
-            'pseudo' => 'admin',
+            'identifiant' => 'admin',
+            'email' => 'xx@xx.fr',
             'password' => bcrypt('admin'), // Utilise bcrypt pour hasher le mot de passe
             'token' => null,
-            'dateLastConnexion' => now(),
+            'urlPictureProfil' => 'defaut.jpg',
+            'idUserPermissions' => 1, // 'admin
+            'dateLastConnexion' => null,
             'deconnexion' => null,
             'statutConnexion' => 0,
-            'updatedAt' => now(),
         ]);
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
