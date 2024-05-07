@@ -26,7 +26,7 @@ export default defineConfig({
         new URL("./src/apiConfig.js", import.meta.url)
       ),
       "@pictureConfig": fileURLToPath(
-        new URL("./src/pictureConfig", import.meta.url)
+        new URL("./src/pictureConfig.js", import.meta.url)
       ),
     },
   },
