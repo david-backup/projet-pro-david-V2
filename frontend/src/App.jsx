@@ -1,15 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
-import MdpForgot from "./pages/MdpForgot";
-import CreateAccount from "./pages/CreateAccount";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import { basename } from "@config";
+import { HomePage, LoginPage, MdpForgot, CreateAccount } from "@react/pages";
+import Header from "./react/components/Header";
+import Footer from "./react/components/Footer";
 
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
