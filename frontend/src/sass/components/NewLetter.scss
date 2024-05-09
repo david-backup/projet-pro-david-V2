@@ -1,0 +1,31 @@
+@import "../utils/Mixins.scss";
+@import "../utils/Variables.scss";
+
+.newLetter_form {
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  text-align: left;
+  transition: gap 350ms ease;
+  @media screen and (min-width: 1600px) {
+    gap: 25px;
+  }
+
+  input {
+    @include shadow_light;
+    height: 45px;
+    font-size: 1.1em;
+    padding-left: 8px;
+    outline: none;
+    background-color: transparent;
+    color: $white_color;
+    border: 2px solid $third_color;
+    border-radius: 10px;
+    &::placeholder {
+      color: $white_color;
+      font-size: 0.8em;
+    }
+  }
+}

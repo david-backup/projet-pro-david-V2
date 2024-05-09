@@ -18,3 +18,12 @@
     background-color: $white_color;
   }
 }
+
+.newLetter_button {
+  margin: 0 auto;
+  padding: 6px 50px;
+  transition: margin-bottom 350ms ease;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 10px;
+  }
+}

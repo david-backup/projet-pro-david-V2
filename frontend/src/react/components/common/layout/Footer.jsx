@@ -1,6 +1,7 @@
 import { Config } from "@config";
 import { Copyright, Version } from "@react/components/common/layout";
 import { Button } from "@react/components/common/buttons";
+import { NewLetter } from "@react/components/newLetter";
 import { FaFacebookF } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { MdOutlinePhoneIphone } from "react-icons/md";
@@ -72,24 +73,16 @@ const Footer = () => {
             <p>GitHub</p>
           </a>
         </div>
-        <div className="footer_content_columns copyright">
-          <a
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Nos Formules"
-            className="footer_content_columns_links"
-          >
-            <GrNotes className="copyright_icon" />
-            <p>Conditions générales de vente</p>
-          </a>
-          <Copyright />
+        <div className="footer_content_columns newLetter">
+          <h5>Newsletter</h5>
+          <NewLetter />
         </div>
       </div>
       <div className="mentions">
         {<Version version={Config.version} date={"01/05/2024"} />}
         <p>||</p>
         <div className="mentions_div">Mentions légales</div>
+        <Copyright />
       </div>
     </footer>
   );
