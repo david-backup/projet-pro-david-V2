@@ -15,14 +15,16 @@ const Footer = () => {
         <div className="footer_content_columns title">
           <h3>David Projects</h3>
           <h4>Développement web</h4>
+          <Button type={"submit"} className={"button"} text={"Espace client"} />
         </div>
         <div className="footer_content_columns contact">
           <h5>Nous contacter</h5>
           <div className="footer_content_columns_phone">
-            <MdOutlinePhoneIphone /> : 06.30.78.82.30
+            <MdOutlinePhoneIphone className="contact_icons" /> : 06.30.78.82.30
           </div>
           <div className="footer_content_columns_email">
-            <MdAlternateEmail /> : david-devcode@ovh.fr
+            <MdAlternateEmail className="contact_icons" /> :
+            david-devcode@ovh.fr
           </div>
           <Button type={"submit"} className={"button"} text={"contact"} />
         </div>
@@ -35,8 +37,18 @@ const Footer = () => {
             aria-label="Facebook"
             className="footer_content_columns_links"
           >
-            <FaFacebookF />
+            <FaFacebookF className="links_icons" />
             <p>Facebook</p>
+          </a>
+          <a
+            href="www.linkedin.com/in/david-changea"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="footer_content_columns_links"
+          >
+            <FaLinkedinIn className="links_icons" />
+            <p>Linkedin</p>
           </a>
           <a
             href="https://twitter.com/DavidChangea"
@@ -45,7 +57,7 @@ const Footer = () => {
             aria-label="Facebook"
             className="footer_content_columns_links"
           >
-            <FaTwitter />
+            <FaTwitter className="links_icons" />
             <p>Twitter</p>
           </a>
           <a
@@ -55,18 +67,8 @@ const Footer = () => {
             aria-label="Facebook"
             className="footer_content_columns_links"
           >
-            <FaGithub />
+            <FaGithub className="links_icons" />
             <p>GitHub</p>
-          </a>
-          <a
-            href="www.linkedin.com/in/david-changea"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="footer_content_columns_links"
-          >
-            <FaLinkedinIn />
-            <p>Linkedin</p>
           </a>
         </div>
         <div className="footer_content_columns copyright">
@@ -75,6 +77,7 @@ const Footer = () => {
       </div>
       <div className="mentions">
         {<Version version={Config.version} date={"01/05/2024"} />}
+        <p>||</p>
         <div className="mentions_div">Mentions légales</div>
       </div>
     </footer>
