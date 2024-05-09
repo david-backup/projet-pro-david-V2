@@ -7,6 +7,7 @@ import { MdOutlinePhoneIphone } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import { GrNotes } from "react-icons/gr";
 
 const Footer = () => {
   return (
@@ -72,6 +73,16 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer_content_columns copyright">
+          <a
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Nos Formules"
+            className="footer_content_columns_links"
+          >
+            <GrNotes className="copyright_icon" />
+            <p>Conditions générales de vente</p>
+          </a>
           <Copyright />
         </div>
       </div>
