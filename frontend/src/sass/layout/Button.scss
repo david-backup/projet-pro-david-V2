@@ -1,2 +1,18 @@
 @import "../utils/Mixins.scss";
 @import "../utils/Variables.scss";
+
+.button {
+  @include shadow;
+  @include lato;
+  padding: 5px 0px;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 2px solid $black_color;
+  transition: color 350ms ease, background-color 350ms ease;
+  cursor: pointer;
+  &:hover {
+    color: $white_color;
+    background-color: $fourth_color;
+  }
+}

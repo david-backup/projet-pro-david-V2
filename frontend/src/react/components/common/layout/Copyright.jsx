@@ -1,7 +1,7 @@
 import { APP_NAME, APP_DEV } from "@config";
 function Copyright() {
   const currentYear = new Date().getFullYear();
-  const yearText = currentYear === 2020 ? "2020" : `2020 - ${currentYear}`;
+  const yearText = currentYear === 2023 ? "2023" : `2023 - ${currentYear}`;
   return (
     <>
       <p>

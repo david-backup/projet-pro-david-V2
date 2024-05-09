@@ -7,26 +7,82 @@ footer {
   margin: 0px auto;
   z-index: 100;
   background-color: $primary_color;
+  padding-bottom: 20px;
 
   .footer_content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 25px;
-    &_title {
+    height: 230px;
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &_columns {
       display: flex;
       flex-direction: column;
+      height: 100%;
+    }
+    .title {
+      @include fontLogo;
       justify-content: center;
+
       h3 {
-        @include fontLogo;
-        font-size: 2.2em;
-        color: $white_color;
+        color: $fourth_color;
+        font-size: 2.8em;
       }
       h4 {
-        @include fontLogo;
-        font-size: 1.4em;
         color: $white_color;
+        font-size: 1.8em;
       }
+    }
+    .contact {
+      gap: 15px;
+      h5 {
+        margin-bottom: 15px;
+        border-bottom: 2px solid $black_color;
+        padding-bottom: 3px;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+      .footer_content_columns_phone,
+      .footer_content_columns_email {
+        color: $white_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+    }
+    .links {
+      gap: 15px;
+      h5 {
+        margin-bottom: 15px;
+        border-bottom: 2px solid $black_color;
+        padding-bottom: 3px;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+      .footer_content_columns_links {
+        color: $white_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+    }
+    .copyright {
+      justify-content: center;
+      color: $white_color;
+      gap: 10px;
+    }
+  }
+  .mentions {
+    color: $white_color;
+    &_div {
+      font-weight: 600;
     }
   }
 }
