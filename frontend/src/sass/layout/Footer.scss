@@ -16,9 +16,14 @@ footer {
     padding: 10px 25px;
     height: 275px;
     border-bottom: 1px solid $third_color;
+    transition: flex-direction 350ms ease, gap 350ms ease;
+    @media screen and (min-width: 1600px) {
+      height: 300px;
+    }
     @media screen and (max-width: 1024px) {
       flex-direction: column;
       height: 100%;
+      gap: 25px;
     }
 
     &_columns {
@@ -28,36 +33,74 @@ footer {
     }
     .title {
       @include fontLogo;
+      transition: padding-bottom 350ms ease, border-bottom 350ms ease;
+      @media screen and (max-width: 1024px) {
+        padding-bottom: 15px;
+        border-bottom: 3px solid $secondary_color;
+      }
 
       h3 {
         color: $third_color;
         font-size: 2.8em;
+        transition: font-size 350ms ease;
+        @media screen and (min-width: 1600px) {
+          font-size: 3.2em;
+        }
       }
       h4 {
         color: $white_color;
         font-size: 1.8em;
         margin-bottom: 47px;
+        transition: font-size 350ms ease;
+        @media screen and (min-width: 1600px) {
+          font-size: 2.2em;
+        }
       }
     }
     .contact {
       gap: 15px;
+      transition: padding-bottom 350ms ease, border-bottom 350ms ease;
+      @media screen and (max-width: 1024px) {
+        padding-bottom: 15px;
+        border-bottom: 3px solid $secondary_color;
+      }
       h5 {
         margin-bottom: 15px;
         border-bottom: 2px solid $black_color;
         padding-bottom: 3px;
         font-size: 1.25em;
         font-weight: 600;
+        transition: font-size 350ms ease, border-bottom 350ms ease,
+          padding-bottom 350ms ease, margin-bottom 350ms ease;
+        @media screen and (min-width: 1600px) {
+          font-size: 1.5em;
+        }
+        @media screen and (max-width: 1024px) {
+          font-size: 1.4em;
+          border-bottom: none;
+          padding-bottom: 0px;
+          margin-bottom: 5px;
+        }
       }
       .footer_content_columns_phone,
       .footer_content_columns_email {
         color: $white_color;
+        font-size: 1.1em;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 5px;
+        transition: font-size 350ms ease;
+        @media screen and (min-width: 1600px) {
+          font-size: 1.25em;
+        }
         .contact_icons {
           color: $third_color;
           font-size: 25px;
+          transition: font-size 350ms ease;
+          @media screen and (min-width: 1600px) {
+            font-size: 30px;
+          }
         }
       }
       .footer_content_columns_email {
@@ -67,21 +110,43 @@ footer {
     .links {
       gap: 15px;
       align-items: flex-start;
+      @media screen and (max-width: 1024px) {
+        padding-bottom: 15px;
+        border-bottom: 3px solid $secondary_color;
+      }
 
       h5 {
         margin-bottom: 15px;
         border-bottom: 2px solid $black_color;
         padding-bottom: 3px;
-        font-size: 1.2em;
+        font-size: 1.25em;
         font-weight: 600;
+        transition: font-size 350ms ease, border-bottom 350ms ease,
+          padding-bottom 350ms ease, margin-bottom 350ms ease;
+        @media screen and (min-width: 1600px) {
+          font-size: 1.5em;
+        }
+        @media screen and (max-width: 1024px) {
+          font-size: 1.4em;
+          border-bottom: none;
+          padding-bottom: 0px;
+          margin-bottom: 5px;
+        }
       }
       .footer_content_columns_links {
         color: $white_color;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
+        text-decoration: none;
+        font-size: 1.1em;
+        transition: font-size 350ms ease;
+        @media screen and (min-width: 1600px) {
+          font-size: 1.25em;
+        }
         .links_icons {
+          @include shadow_light;
           color: $white_color;
           font-size: 35px;
           background-color: $primary_color;
@@ -91,8 +156,12 @@ footer {
           justify-content: center;
           padding: 5px;
           border-radius: 100%;
-          transition: color 350ms ease, background-color 350ms ease;
-
+          transition: color 350ms ease, background-color 350ms ease,
+            font-size 350ms ease, padding 350ms ease;
+          @media screen and (min-width: 1600px) {
+            font-size: 38px;
+            padding: 7px;
+          }
           &:hover {
             color: $primary_color;
             background-color: $white_color;
@@ -104,6 +173,14 @@ footer {
       justify-content: center;
       color: $white_color;
       gap: 10px;
+      font-size: 1.1em;
+      transition: font-size 350ms ease, margin-bottom 350ms ease;
+      @media screen and (min-width: 1600px) {
+        font-size: 1.25em;
+      }
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 15px;
+      }
     }
   }
   .mentions {
@@ -113,8 +190,18 @@ footer {
     margin-top: 25px;
     gap: 15px;
     color: $white_color;
+    transition: font-size 350ms ease;
+    @media screen and (min-width: 1600px) {
+      font-size: 1.25em;
+    }
+
     &_div {
       font-weight: 600;
+      cursor: pointer;
+      transition: color 350ms ease;
+      &:hover {
+        color: $third_color;
+      }
     }
   }
 }

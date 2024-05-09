@@ -2,10 +2,10 @@
 @import "../utils/Variables.scss";
 
 .button {
-  @include shadow;
+  @include shadow_light;
   @include lato;
   padding: 5px 0px;
-  font-size: 1.2em;
+  font-size: 1.35em;
   font-weight: 600;
   border-radius: 25px;
   background-color: $primary_color;

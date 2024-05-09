@@ -20,10 +20,10 @@ const Footer = () => {
         <div className="footer_content_columns contact">
           <h5>Nous contacter</h5>
           <div className="footer_content_columns_phone">
-            <MdOutlinePhoneIphone className="contact_icons" /> : 06.30.78.82.30
+            <MdOutlinePhoneIphone className="contact_icons" /> 06.30.78.82.30
           </div>
           <div className="footer_content_columns_email">
-            <MdAlternateEmail className="contact_icons" /> :
+            <MdAlternateEmail className="contact_icons" />
             david-devcode@ovh.fr
           </div>
           <Button type={"submit"} className={"button"} text={"contact"} />
