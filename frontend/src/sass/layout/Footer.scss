@@ -36,7 +36,7 @@ footer {
       transition: padding-bottom 350ms ease, border-bottom 350ms ease;
       @media screen and (max-width: 1024px) {
         padding-bottom: 15px;
-        border-bottom: 3px solid $secondary_color;
+        border-bottom: 3px solid $white_color;
       }
 
       h3 {
@@ -50,7 +50,7 @@ footer {
       h4 {
         color: $white_color;
         font-size: 1.8em;
-        margin-bottom: 47px;
+        margin-bottom: 52px;
         transition: font-size 350ms ease;
         @media screen and (min-width: 1600px) {
           font-size: 2.2em;
@@ -62,24 +62,40 @@ footer {
       transition: padding-bottom 350ms ease, border-bottom 350ms ease;
       @media screen and (max-width: 1024px) {
         padding-bottom: 15px;
-        border-bottom: 3px solid $secondary_color;
+        border-bottom: 3px solid $white_color;
       }
-      h5 {
-        margin-bottom: 15px;
+      .contact_title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
         border-bottom: 2px solid $black_color;
         padding-bottom: 3px;
-        font-size: 1.25em;
-        font-weight: 600;
-        transition: font-size 350ms ease, border-bottom 350ms ease,
-          padding-bottom 350ms ease, margin-bottom 350ms ease;
-        @media screen and (min-width: 1600px) {
-          font-size: 1.5em;
+        margin-bottom: 20px;
+
+        .contact_icons {
+          color: $third_color;
+          font-size: 25px;
+          transition: font-size 350ms ease;
+          @media screen and (min-width: 1600px) {
+            font-size: 30px;
+          }
         }
-        @media screen and (max-width: 1024px) {
-          font-size: 1.4em;
-          border-bottom: none;
-          padding-bottom: 0px;
-          margin-bottom: 5px;
+
+        h5 {
+          font-size: 1.25em;
+          font-weight: 600;
+          transition: font-size 350ms ease, border-bottom 350ms ease,
+            padding-bottom 350ms ease, margin-bottom 350ms ease;
+          @media screen and (min-width: 1600px) {
+            font-size: 1.5em;
+          }
+          @media screen and (max-width: 1024px) {
+            font-size: 1.4em;
+            border-bottom: none;
+            padding-bottom: 0px;
+            margin-bottom: 5px;
+          }
         }
       }
       .footer_content_columns_phone,
@@ -112,25 +128,40 @@ footer {
       align-items: flex-start;
       @media screen and (max-width: 1024px) {
         padding-bottom: 15px;
-        border-bottom: 3px solid $secondary_color;
+        border-bottom: 3px solid $white_color;
       }
-
-      h5 {
-        margin-bottom: 15px;
+      .links_title {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
         border-bottom: 2px solid $black_color;
-        padding-bottom: 3px;
-        font-size: 1.25em;
-        font-weight: 600;
-        transition: font-size 350ms ease, border-bottom 350ms ease,
-          padding-bottom 350ms ease, margin-bottom 350ms ease;
-        @media screen and (min-width: 1600px) {
-          font-size: 1.5em;
+        padding: 0px 10px 3px;
+        max-width: 220px;
+        margin: 0 auto 20px;
+
+        .links_icons {
+          color: $third_color;
+          font-size: 20px;
+          transition: font-size 350ms ease;
+          @media screen and (min-width: 1600px) {
+            font-size: 25px;
+          }
         }
-        @media screen and (max-width: 1024px) {
-          font-size: 1.4em;
-          border-bottom: none;
-          padding-bottom: 0px;
-          margin-bottom: 5px;
+
+        h5 {
+          font-size: 1.25em;
+          font-weight: 600;
+          transition: font-size 350ms ease, border-bottom 350ms ease,
+            padding-bottom 350ms ease, margin-bottom 350ms ease;
+          @media screen and (min-width: 1600px) {
+            font-size: 1.5em;
+          }
+          @media screen and (max-width: 1024px) {
+            font-size: 1.4em;
+            border-bottom: none;
+            padding-bottom: 0px;
+            margin-bottom: 5px;
+          }
         }
       }
       .footer_content_columns_links {
@@ -139,6 +170,7 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 15px;
+        padding-left: 25px;
         text-decoration: none;
         font-size: 1.1em;
         transition: font-size 350ms ease;
@@ -174,22 +206,38 @@ footer {
       transition: font-size 350ms ease, margin-bottom 350ms ease, gap 350ms ease,
         text-align 350ms ease;
 
-      h5 {
-        margin-bottom: 25px;
+      .newLetter_title {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
         border-bottom: 2px solid $black_color;
-        padding-bottom: 3px;
-        font-size: 1.25em;
-        font-weight: 600;
-        transition: font-size 350ms ease, border-bottom 350ms ease,
-          padding-bottom 350ms ease, margin-bottom 350ms ease;
-        @media screen and (min-width: 1600px) {
-          font-size: 1.5em;
+        padding: 0px 10px 3px;
+        max-width: 220px;
+        margin: 0 auto 25px;
+
+        .newLetter_icons {
+          color: $third_color;
+          font-size: 20px;
+          transition: font-size 350ms ease;
+          @media screen and (min-width: 1600px) {
+            font-size: 25px;
+          }
         }
-        @media screen and (max-width: 1024px) {
-          font-size: 1.4em;
-          border-bottom: none;
-          padding-bottom: 0px;
-          margin-bottom: 5px;
+
+        h5 {
+          font-size: 1.25em;
+          font-weight: 600;
+          transition: font-size 350ms ease, border-bottom 350ms ease,
+            padding-bottom 350ms ease, margin-bottom 350ms ease;
+          @media screen and (min-width: 1600px) {
+            font-size: 1.5em;
+          }
+          @media screen and (max-width: 1024px) {
+            font-size: 1.4em;
+            border-bottom: none;
+            padding-bottom: 0px;
+            margin-bottom: 5px;
+          }
         }
       }
     }
@@ -204,7 +252,7 @@ footer {
     transition: font-size 350ms ease, flex-direction 350ms ease, gap 350ms ease,
       margin-top 350ms ease;
     @media screen and (min-width: 1600px) {
-      font-size: 1.25em;
+      font-size: 1.15em;
     }
     @media screen and (max-width: 1024px) {
       flex-direction: column;

@@ -8,7 +8,9 @@ import { MdOutlinePhoneIphone } from "react-icons/md";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
-import { GrNotes } from "react-icons/gr";
+import { ImFileText2 } from "react-icons/im";
+import { IoIosMailUnread } from "react-icons/io";
+import { LuExternalLink } from "react-icons/lu";
 
 const Footer = () => {
   return (
@@ -20,7 +22,10 @@ const Footer = () => {
           <Button type={"submit"} className={"button"} text={"Espace client"} />
         </div>
         <div className="footer_content_columns contact">
-          <h5>Nous contacter</h5>
+          <div className="contact_title">
+            <IoIosMailUnread className="contact_icons" />
+            <h5>Nous contacter</h5>
+          </div>
           <div className="footer_content_columns_phone">
             <MdOutlinePhoneIphone className="contact_icons" /> 06.30.78.82.30
           </div>
@@ -31,7 +36,10 @@ const Footer = () => {
           <Button type={"submit"} className={"button"} text={"contact"} />
         </div>
         <div className="footer_content_columns links">
-          <h5>Nous suivre</h5>
+          <div className="links_title">
+            <LuExternalLink className="links_icons" />
+            <h5>Nous suivre</h5>
+          </div>
           <a
             href="https://www.facebook.com/david.723751?locale=fr_FR"
             target="_blank"
@@ -74,7 +82,10 @@ const Footer = () => {
           </a>
         </div>
         <div className="footer_content_columns newLetter">
-          <h5>Newsletter</h5>
+          <div className="newLetter_title">
+            <ImFileText2 className="newLetter_icons" />
+            <h5>Newsletter</h5>
+          </div>
           <NewLetter />
         </div>
       </div>
