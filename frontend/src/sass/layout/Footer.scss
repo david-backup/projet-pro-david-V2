@@ -69,7 +69,7 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 20px;
-        border-bottom: 2px solid $black_color;
+        border-bottom: 2px solid $third_color;
         padding-bottom: 3px;
         margin-bottom: 20px;
 
@@ -83,6 +83,7 @@ footer {
         }
 
         h5 {
+          color: $white_color;
           font-size: 1.25em;
           font-weight: 600;
           transition: font-size 350ms ease, border-bottom 350ms ease,
@@ -134,7 +135,7 @@ footer {
         display: flex;
         justify-content: center;
         gap: 20px;
-        border-bottom: 2px solid $black_color;
+        border-bottom: 2px solid $third_color;
         padding: 0px 10px 3px;
         max-width: 220px;
         margin: 0 auto 20px;
@@ -149,6 +150,7 @@ footer {
         }
 
         h5 {
+          color: $white_color;
           font-size: 1.25em;
           font-weight: 600;
           transition: font-size 350ms ease, border-bottom 350ms ease,
@@ -210,7 +212,7 @@ footer {
         display: flex;
         justify-content: center;
         gap: 20px;
-        border-bottom: 2px solid $black_color;
+        border-bottom: 2px solid $third_color;
         padding: 0px 10px 3px;
         max-width: 220px;
         margin: 0 auto 25px;
@@ -225,6 +227,7 @@ footer {
         }
 
         h5 {
+          color: $white_color;
           font-size: 1.25em;
           font-weight: 600;
           transition: font-size 350ms ease, border-bottom 350ms ease,

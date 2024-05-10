@@ -22,8 +22,29 @@
 .newLetter_button {
   margin: 0 auto;
   padding: 6px 50px;
-  transition: margin-bottom 350ms ease;
+  transition: margin-bottom 350ms ease, color 350ms ease,
+    background-color 350ms ease;
   @media screen and (max-width: 1024px) {
     margin-bottom: 10px;
+  }
+}
+
+.back-to-top {
+  @include shadow_light;
+  color: $white_color;
+  background-color: transparent;
+  width: 40px;
+  height: 50px;
+  font-size: 1.6em;
+  border: 2px solid $third_color;
+  border-radius: 5px;
+  transition: color 350ms ease, background-color 350ms ease;
+  cursor: pointer;
+  @media screen and (max-width: 1024px) {
+    margin-top: 10px;
+  }
+  &:hover {
+    color: $primary_color;
+    background-color: $white_color;
   }
 }

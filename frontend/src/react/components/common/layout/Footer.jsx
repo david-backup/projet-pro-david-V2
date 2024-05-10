@@ -1,6 +1,6 @@
 import { Config } from "@config";
 import { Copyright, Version } from "@react/components/common/layout";
-import { Button } from "@react/components/common/buttons";
+import { Button, BackToTopButton } from "@react/components/common/buttons";
 import { NewLetter } from "@react/components/newLetter";
 import { FaFacebookF } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
@@ -94,6 +94,7 @@ const Footer = () => {
         <p>||</p>
         <div className="mentions_div">Mentions légales</div>
         <Copyright />
+        <BackToTopButton />
       </div>
     </footer>
   );
