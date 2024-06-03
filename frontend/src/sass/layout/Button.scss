@@ -30,21 +30,27 @@
 }
 
 .back-to-top {
-  @include shadow_light;
-  color: $white_color;
-  background-color: transparent;
+  position: fixed;
+  bottom: 20px; /* Positionnez le bouton en bas de la fenêtre */
+  right: 20px; /* Positionnez le bouton sur le côté droit de la fenêtre */
   width: 40px;
-  height: 50px;
-  font-size: 1.6em;
-  border: 2px solid $third_color;
-  border-radius: 5px;
-  transition: color 350ms ease, background-color 350ms ease;
-  cursor: pointer;
-  @media screen and (max-width: 1024px) {
-    margin-top: 10px;
-  }
+  height: 40px;
+  background-color: $primary_color; /* Couleur de fond du bouton */
+  color: $white_color; /* Couleur du texte du bouton */
+  border: 2px solid $third_color; /* Supprimez la bordure du bouton */
+  border-radius: 100%; /* Rendez le bouton rond en arrondissant les coins */
+  padding: 8px; /* Ajoutez un peu de rembourrage pour le bouton */
+  cursor: pointer; /* Changez le curseur pour indiquer que le bouton est cliquable */
+  opacity: 0; /* Masquez initialement le bouton */
+  transition: opacity 350ms ease, color 350ms ease, background-color 350ms ease;
+  font-size: 1.2em;
+
   &:hover {
     color: $primary_color;
     background-color: $white_color;
   }
+}
+/* Style pour afficher le bouton lorsque isVisible est true */
+.back-to-top.is-visible {
+  opacity: 1; /* Affichez le bouton en le rendant complètement opaque */
 }
